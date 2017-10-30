@@ -136,26 +136,6 @@
             <!--android:text="Login Com Google"-->
             <!--android:textColor="#ffffff" />-->
 
-            <TextView
-                android:id="@+id/link_esqueci_senha"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:gravity="center"
-                android:text="Esqueci minha senha"
-                android:textColor="@color/colorAccent"
-                android:textSize="16dip" />
-
-            <TextView
-                android:id="@+id/link_signup"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:gravity="center"
-                android:text="Não é cadastrado? Cadastre-se!"
-                android:textColor="@color/colorAccent"
-                android:textSize="16dip" />
-
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.SpannableString;
@@ -27,8 +26,6 @@ import com.codigo.rafael.easygasentregador.MainActivity;
 import com.codigo.rafael.easygasentregador.R;
 
 
-import org.json.JSONException;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -36,22 +33,14 @@ public class LoginActivity extends AppCompatActivity {
 
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
-    private static final String chaveFacebook = "+F7e0vDnxU8H4co9SGbWQVmkNKY=";
-    private static final String hashFacebook = "Hni6PDUXmVmo09glvl3+iicOtNo=";
-    private static final String shaGoogle = "4A:E2:9D:23:C1:66:F0:C5:E2:B2:F0:60:D0:E8:87:EF:43:9F:F9:12";
-    private static final String clientIDGoogle = "313647538384-aqaid1nb1b12ujhl17ibaltbqu6gg2v5.apps.googleusercontent.com ";
-    private static final String chaveGoogle = "GS18lbMtmrDtk_evc01RNLtO ";
     private static final int RC_SIGN_IN = 0;
     @Bind(R.id.et_email_login_activity)
     EditText _emailText;
     @Bind(R.id.et_senha_login_activity)
     EditText _passwordText;
     @Bind(R.id.btn_login)
-    Button _loginButton;
-    @Bind(R.id.link_signup)
-    TextView _signupLink;
-    @Bind(R.id.link_esqueci_senha)
-    TextView esqueciSenha;
+    Button btLogin;
+
 
     private SharedPreferences preferences;
 
@@ -79,18 +68,8 @@ public class LoginActivity extends AppCompatActivity {
 //            finish();
         }
 
-        SpannableString spanString2 = new SpannableString(esqueciSenha.getText().toString());
-        spanString2.setSpan(new UnderlineSpan(), 0, spanString2.length(), 0);
-        spanString2.setSpan(new StyleSpan(Typeface.ITALIC), 0, spanString2.length(), 0);
-        esqueciSenha.setText(spanString2);
 
-        SpannableString spanString = new SpannableString(_signupLink.getText().toString());
-        spanString.setSpan(new UnderlineSpan(), 0, spanString.length(), 0);
-        spanString.setSpan(new StyleSpan(Typeface.ITALIC), 0, spanString.length(), 0);
-        _signupLink.setText(spanString);
-
-
-        _loginButton.setOnClickListener(new View.OnClickListener() {
+        btLogin.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -98,12 +77,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        esqueciSenha.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mensagem();
-            }
-        });
 
         _passwordText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -128,7 +101,7 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        _loginButton.setEnabled(false);
+        btLogin.setEnabled(false);
 
 //        final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
 //                R.style.Theme_MyTheme);
@@ -177,7 +150,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onLoginSuccess() {
-        _loginButton.setEnabled(true);
+        btLogin.setEnabled(true);
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }
@@ -185,7 +158,7 @@ public class LoginActivity extends AppCompatActivity {
     public void onLoginFailed() {
         Toast.makeText(getBaseContext(), "Login falhou", Toast.LENGTH_LONG).show();
 
-        _loginButton.setEnabled(true);
+        btLogin.setEnabled(true);
     }
 
     public boolean validate() {
