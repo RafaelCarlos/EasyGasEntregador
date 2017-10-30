@@ -18,34 +18,13 @@
         android:titleTextColor="#ffffff"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <RelativeLayout
-        android:id="@+id/rl_container_titulo_main_activity"
-        android:layout_width="match_parent"
-        android:layout_height="36sp"
-        android:layout_below="@+id/tb_main_activity"
-        android:background="@color/accent">
-
-        <TextView
-            android:id="@+id/tv_titulo_main_activity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="8dp"
-            android:text="Entregas Pendentes"
-            android:textAlignment="center"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
 
     <RelativeLayout
         android:id="@+id/rl_fragment_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/rl_container_titulo_main_activity"
-        android:layout_marginTop="10dp">
+        android:layout_below="@+id/tb_main_activity">
 
     </RelativeLayout>
 
