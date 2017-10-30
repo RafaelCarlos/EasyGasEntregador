@@ -53,10 +53,10 @@ public class MenuFragment extends Fragment {
         mListView = view.findViewById(R.id.lv_menu_fragment);
         listaMenu = new ArrayList<>();
 
-        listaMenu.add(new Menu("Adalberto Gás", "405 Norte - Plano Diretor Norte", 3.5, R.mipmap.ic_car, "R$ 85,00"));
-        listaMenu.add(new Menu("Distribuidor do José", "101 Sul - Plano Diretor Sul", 1.2, R.mipmap.ic_car, "R$ 82,00"));
+        listaMenu.add(new Menu("Rafael Carlos", "405 Norte - Plano Diretor Norte", 3.5, R.mipmap.ic_car, "Valor do Pedido: R$ 85,00"));
+        listaMenu.add(new Menu("Joãzinho Silva", "101 Sul - Plano Diretor Sul", 1.2, R.mipmap.ic_car, "Valor do Pedido: R$ 82,00"));
 
-        listaMenu.add(new Menu("Gás e Água", "Taquaralto", 6.5, R.mipmap.ic_car, "R$ 80,00"));
+        listaMenu.add(new Menu("Mateus Pereira", "305 Norte - Plano Diretor Norte", 6.5, R.mipmap.ic_car, "Valor do Pedido: R$ 80,00"));
 
         MenuAdapter menuAdapter = new MenuAdapter(getActivity(), listaMenu);
 

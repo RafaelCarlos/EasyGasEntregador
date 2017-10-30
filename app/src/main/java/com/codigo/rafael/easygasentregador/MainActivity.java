@@ -95,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Posicao: " + position, Toast.LENGTH_SHORT).show();
                             toolbar.setTitle("Histórico");
                             toolbar.setTitleTextColor(Color.WHITE);
+                        } else {
+                            frag = new MenuFragment();
                         }
 
                         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
