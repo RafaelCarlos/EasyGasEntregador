@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_andamento"
         android:icon="@mipmap/ic_sync"
         android:title="Andamento" />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_concluido"
         android:icon="@drawable/ic_vector_done"
         android:title="Concluídos" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_cancelado"
         android:icon="@drawable/ic_vector_cancel"
         android:title="Cancelados" />
 

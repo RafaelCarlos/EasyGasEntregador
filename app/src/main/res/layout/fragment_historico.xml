@@ -6,15 +6,29 @@
     android:orientation="vertical"
     tools:context="com.codigo.rafael.easygasentregador.fragments.HistoricoFragment">
 
+
+    <RelativeLayout
+        android:id="@+id/rl_container_fragment_historico"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navigation_main"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+    </RelativeLayout>
+
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_gravity="bottom"
         android:background="#DCDCDC"
-        app:menu="@menu/navigation"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        app:menu="@menu/navigation" />
+
 
 </RelativeLayout>
