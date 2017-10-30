@@ -60,6 +60,7 @@ public class MenuFragment extends Fragment {
 
         MenuAdapter menuAdapter = new MenuAdapter(getActivity(), listaMenu);
 
+//        mListView.setDivider(getResources().getDrawable(R.color.colorAccent));
         mListView.setAdapter(menuAdapter);
 
 
