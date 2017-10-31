@@ -67,6 +67,72 @@
                 android:layout_marginTop="10dp"
                 android:text="Bairro"
                 android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/tv_distancia_cliente_entrega_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_bairro_cliente_entrega_activity"
+                android:layout_marginTop="10dp"
+                android:text="Distância"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/tv_tempo_cliente_entrega_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_distancia_cliente_entrega_activity"
+                android:layout_marginTop="10dp"
+                android:text="Tempo Entrega"
+                android:textColor="@color/colorAccent" />
+
+
+            <TextView
+                android:id="@+id/tv_valor_pedido_cliente_entrega_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_tempo_cliente_entrega_activity"
+                android:layout_marginTop="10dp"
+                android:text="Valor Pedido"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/tv_tipo_pagamento_cliente_entrega_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_valor_pedido_cliente_entrega_activity"
+                android:layout_marginTop="10dp"
+                android:text="Pagamento escolhido: Cartão de Crédito"
+                android:textColor="@color/colorAccent" />
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/bt_entrega_activity"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_below="@+id/tv_tipo_pagamento_cliente_entrega_activity"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="24dp"
+                android:background="?attr/colorPrimary"
+                android:drawableLeft="@mipmap/ic_truck"
+                android:padding="12dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:shadowColor="@color/colorAccent"
+                android:text="Entregar"
+                android:textColor="#ffffff" />
+
         </RelativeLayout>
 
 

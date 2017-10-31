@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.codigo.rafael.easygasentregador.R;
@@ -48,20 +47,20 @@ public class MenuAdapter extends ArrayAdapter<Menu> {
         TextView tvTitulo = convertView.findViewById(R.id.tv_titulo_nome_cliente_activity);
         tvTitulo.setText(lista.get(position).getTitulo());
 
-        TextView tvBairro = convertView.findViewById(R.id.tv_bairro_cliente_activity);
+        TextView tvBairro = convertView.findViewById(R.id.tv_bairro_cliente_menu_fragment);
         tvBairro.setText(lista.get(position).getBairro());
 
-        TextView tvDistancia = convertView.findViewById(R.id.tv_distancia_cliente_activity);
+        TextView tvDistancia = convertView.findViewById(R.id.tv_distancia_cliente_menu_fragment);
         tvDistancia.setText(String.valueOf(lista.get(position).getDistancia()) + " km");
 
 
-        ImageView vrImageView = convertView.findViewById(R.id.iv_ic_car_cliente_activity);
+        ImageView vrImageView = convertView.findViewById(R.id.iv_ic_car_cliente_menu_fragment);
         vrImageView.setImageBitmap(BitmapFactory.decodeResource(context.getResources(), lista.get(position).getFoto()));
 
 
 //        btCar.setText(lista.get(position).getBtCar());
 
-        TextView tvValor = convertView.findViewById(R.id.tv_valor_cliente_activity);
+        TextView tvValor = convertView.findViewById(R.id.tv_valor_cliente_menu_fragment);
         tvValor.setText(lista.get(position).getValor());
 
 

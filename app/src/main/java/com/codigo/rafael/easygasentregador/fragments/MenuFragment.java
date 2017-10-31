@@ -14,7 +14,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+import com.codigo.rafael.easygasentregador.EntregaActivity;
 import com.codigo.rafael.easygasentregador.R;
 import com.codigo.rafael.easygasentregador.adapters.MenuAdapter;
 import com.codigo.rafael.easygasentregador.entities.Menu;
@@ -67,13 +67,13 @@ public class MenuFragment extends Fragment {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                bundle = new Bundle();
-//                menu = (Menu) mListView.getItemAtPosition(i);
-//                intent = new Intent(getActivity(), DistribuidorActivity.class);
-//                bundle.putSerializable("menu", (Serializable) menu);
-//                intent.putExtras(bundle);
-//
-//                startActivity(intent);
+                bundle = new Bundle();
+                menu = (Menu) mListView.getItemAtPosition(i);
+                intent = new Intent(getActivity(), EntregaActivity.class);
+                bundle.putSerializable("menu", (Serializable) menu);
+                intent.putExtras(bundle);
+
+                startActivity(intent);
 
                 Toast.makeText(getActivity(), "Você escolheu a distribuidora: " + listaMenu.get(i).getTitulo(), Toast.LENGTH_LONG).show();
 //                if (i == 0) {
