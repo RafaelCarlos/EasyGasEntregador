@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Drawer drawerMenu;
     private Toolbar toolbar;
+    private final String CHAVE_API_GCM = "AIzaSyC30snUcG0sip45RwcNKEjTLAvKv5YFH9U";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -42,8 +42,8 @@ public class EntregaActivity extends AppCompatActivity {
 
         tvNomeCliente.setText("Cliente: " + menu.getTitulo());
         tvEndereco.setText("Endereço: " + menu.getBairro());
-        tvValorPedido.setText("Valor do Pedido: " + menu.getValor());
-        tvDistancia.setText("Distância: " + menu.getDistancia());
+        tvValorPedido.setText(menu.getValor());
+        tvDistancia.setText("Distância: " + menu.getDistancia() + "km");
 
     }
 

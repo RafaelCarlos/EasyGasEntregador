@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1067282601509",
+    "firebase_url": "https://easygasentregador.firebaseio.com",
+    "project_id": "easygasentregador",
+    "storage_bucket": "easygasentregador.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067282601509:android:2321f0c3b0820c94",
+        "android_client_info": {
+          "package_name": "com.codigo.rafael.easygasentregador"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067282601509-qvh0as1djh3r1410p0ur6l0akekggulj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codigo.rafael.easygasentregador",
+            "certificate_hash": "4ae29d23c166f0c5e2b2f060d0e887ef439ff912"
+          }
+        },
+        {
+          "client_id": "1067282601509-cnbtqortq25kpm1lrkmqda2gghkgljik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdREVju_Mm7V9NZOoe2vbhTsXr04fWyz4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067282601509-cnbtqortq25kpm1lrkmqda2gghkgljik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
