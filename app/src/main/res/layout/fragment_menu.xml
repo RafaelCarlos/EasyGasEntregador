@@ -1,38 +1,45 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.codigo.rafael.easygasentregador.fragments.MenuFragment">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/rl_container_titulo_menu_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="36sp"
-        android:background="@color/accent">
 
-        <TextView
-            android:id="@+id/tv_titulo_menu_fragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="8dp"
-            android:text="Entregas Pendentes"
-            android:textAlignment="center"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-    <ListView
-        android:id="@+id/lv_menu_fragment"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/rl_container_titulo_menu_fragment"
-        android:layout_marginLeft="6dp"
-        android:layout_marginRight="6dp"
-        android:layout_marginTop="10dp"
-        android:choiceMode="singleChoice"
-        android:divider="@null"
-        android:scrollbars="vertical" />
-</LinearLayout>
+        android:orientation="vertical"
+        tools:context="com.codigo.rafael.easygasentregador.fragments.MenuFragment">
+
+        <RelativeLayout
+            android:id="@+id/rl_container_titulo_menu_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="36sp"
+            android:background="@color/accent">
+
+            <TextView
+                android:id="@+id/tv_titulo_menu_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="Entregas Pendentes"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/lv_menu_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_container_titulo_menu_fragment"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="10dp"
+            android:choiceMode="singleChoice"
+            android:divider="@null"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

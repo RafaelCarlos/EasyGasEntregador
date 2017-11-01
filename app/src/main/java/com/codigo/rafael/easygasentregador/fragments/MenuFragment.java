@@ -3,6 +3,7 @@ package com.codigo.rafael.easygasentregador.fragments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,10 +25,8 @@ import java.util.ArrayList;
 
 
 public class MenuFragment extends Fragment {
-    public MenuFragment() {
-        // Required empty public constructor
-    }
 
+    private SwipeRefreshLayout mSwipeRefreshLayout;
     private ListView mListView;
     int posicaoAtual = 0;
     private TextView tvTitulo, tvValor, tvDistancia, tvBairro;
@@ -38,6 +37,10 @@ public class MenuFragment extends Fragment {
     private Menu menu;
     private Bundle bundle;
     private Intent intent;
+
+    public MenuFragment() {
+        // Required empty public constructor
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,6 +53,7 @@ public class MenuFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_menu, container, false);
         intent = new Intent();
+        mSwipeRefreshLayout = view.findViewById(R.id.swipe);
         mListView = view.findViewById(R.id.lv_menu_fragment);
         listaMenu = new ArrayList<>();
 
@@ -58,12 +62,24 @@ public class MenuFragment extends Fragment {
 
         listaMenu.add(new Menu("Mateus Pereira", "305 Norte - Plano Diretor Norte", 6.5, R.mipmap.ic_car, "Valor do Pedido: R$ 80,00"));
 
-        MenuAdapter menuAdapter = new MenuAdapter(getActivity(), listaMenu);
+        final MenuAdapter menuAdapter = new MenuAdapter(getActivity(), listaMenu);
 
 //        mListView.setDivider(getResources().getDrawable(R.color.colorAccent));
         mListView.setAdapter(menuAdapter);
 
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
 
+                new android.os.Handler().postDelayed(
+                        new Runnable() {
+                            public void run() {
+                                mSwipeRefreshLayout.setRefreshing(false);
+                            }
+                        }, 3000);
+            }
+
+        });
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
